@@ -42,8 +42,8 @@ class AmazonFeed extends AmazonFeedsCore{
      * @internal param string $s [optional] <p>Name for the store you want to use.
      * This parameter is optional if only one store is defined in the config file.</p>
      */
-    public function __construct($mock = false, $m = null, $config = null){
-        parent::__construct($m, $config);
+    public function __construct($s = null, $mock = false, $m = null, $config = null){
+        parent::__construct($s, $mock, $m, $config);
         include($this->env);
         
         $this->options['Action'] = 'SubmitFeed';
